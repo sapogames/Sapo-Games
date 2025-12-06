@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/public/icon.png" type="image/svg+xml">
     <link rel="stylesheet" href="style/css.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Sapo Games</title>
 </head>
 <body>
@@ -64,7 +65,7 @@
     <section class="games-section" id="jogos">
         <!-- <h2 class="section-title">Vem Jogar!</h2> -->
         <!-- Game 1 -->
-        <div class="game-card">
+        <div class="game-card ">
             <video class="game-image" src="assets/video/banzeiro.mp4" autoplay muted loop></video>
             <!-- <img class="game-image" src="assets/img/jogos/banzeiro.jpeg" > -->
             <div class="game-info">
@@ -72,7 +73,7 @@
                 <p>
                     Fuja da destruição humana nas águas da Amazônia! Em Banzeiro, você é um peixe lutando para sobreviver à lama tóxica, ao lixo e à pesca predatória. Nade o mais longe que puder, desbloqueie novas espécies e descubra até onde a natureza consegue resistir.
                 </p>
-                <a class="btn-play" href="https://sapogamesofc.itch.io/banzeiro">
+                <a class="btn-play"  data-aos="fade-right" href="https://sapogamesofc.itch.io/banzeiro">
                     <svg class="icon" id="Play" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                         <path class="color000000 svgShape" fill="#ffffff" d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"></path>
                     </svg>
@@ -82,18 +83,18 @@
         </div>
 
         <!-- Game 2 -->
-        <div class="game-card reverse-mobile">
+        <div class="game-card reverse-mobile"  >
             <video class="game-image mobile"  src="assets/video/geobot.mp4" autoplay muted loop></video>
              <div class="game-info">
                 <h3>Geobot</h3>
                 <p>
                     Explore o interior do planeta com Geobot, um robô geofísico criado para investigar as profundezas da Terra. Da crosta ao núcleo você coleta chips que revelam dados e curiosidades sobre a estrutura geológica do planeta. Mergulhe em uma aventura científica onde jogabilidade e geofísica se encontram em uma jornada de descoberta e conhecimento.
                 </p>
-                <a class="btn-play" href="https://sapogamesofc.itch.io/geobot">
+                <a class="btn-play"  data-aos="fade-right" href="https://sapogamesofc.itch.io/geobot">
                     <svg class="icon" id="Play" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                         <path class="color000000 svgShape" fill="#ffffff" d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"></path>
                     </svg>
-                    <span class="text">Jogue agora!</span>
+                    <span class="text" >Jogue agora!</span>
                 </a>
             </div>
         </div>
@@ -116,7 +117,7 @@
             <section id="team-player" class="team-col">
                 <button class="team-swiper-btn prev" aria-label="Anterior">&lt;</button>
                 <div class="player-img">
-                    <img src="" alt="">
+                    <img src="" alt="" data-aos="flip-left">
                 </div>
                 <button class="team-swiper-btn next" aria-label="Próximo">&gt;</button>
                 <p id="player-name"></p>
@@ -187,5 +188,6 @@
     </script>
     <script src="js/script.js"></script>
     <script src="js/three-scene.js" type="module"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
