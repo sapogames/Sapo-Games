@@ -175,7 +175,7 @@ loader.load(
       center.z + Math.max(size.x, size.y, size.z) * 1.5
     );
     controls.target.copy(center);
-    camera.position.set(0, 1.8, 4.5); // Posição da câmera reajustada para o novo tamanho
+    camera.position.set(2, 1.8, 4.5); // Posição da câmera reajustada para o novo tamanho
 
     console.log("Modelo adicionado à cena");
   },
