@@ -148,6 +148,68 @@
             // Initial selection
             selectPlayer(0);
 
+            // Arrow navigation for team-player on mobile
+            const prevButton = document.querySelector('.team-swiper-btn.prev');
+            const nextButton = document.querySelector('.team-swiper-btn.next');
+
+            nextButton.addEventListener('click', () => {
+                let nextIndex = currentPlayerIndex + 1;
+                if (nextIndex >= teamData.length) {
+                    nextIndex = 0; // Loop back to the first
+                }
+                selectPlayer(nextIndex);
+            });
+
+            prevButton.addEventListener('click', () => {
+                let prevIndex = currentPlayerIndex - 1;
+                if (prevIndex < 0) {
+                    prevIndex = teamData.length - 1; // Loop back to the last
+                }
+                selectPlayer(prevIndex);
+            });
+
+            // Swiper logic for team-player on mobile
+            const teamPlayerElement = document.getElementById('team-player');
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const swipeThreshold = 50; // Minimum distance for a swipe
+
+            function handleSwipe() {
+                // Check if it's mobile view
+                if (window.innerWidth > 768) {
+                    return;
+                }
+
+                const swipeDistance = touchEndX - touchStartX;
+
+                if (Math.abs(swipeDistance) > swipeThreshold) {
+                    if (swipeDistance < 0) {
+                        // Swipe left
+                        let nextIndex = currentPlayerIndex + 1;
+                        if (nextIndex >= teamData.length) {
+                            nextIndex = 0; // Loop back to the first
+                        }
+                        selectPlayer(nextIndex);
+                    } else {
+                        // Swipe right
+                        let prevIndex = currentPlayerIndex - 1;
+                        if (prevIndex < 0) {
+                            prevIndex = teamData.length - 1; // Loop back to the last
+                        }
+                        selectPlayer(prevIndex);
+                    }
+                }
+            }
+
+            teamPlayerElement.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            teamPlayerElement.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
             // Event Card Logic
             const eventData = [
                 {

@@ -909,6 +909,36 @@
     font-size: 40px;
     font-weight: bold;
     margin-top: 15px;
+    user-select: none; /* Prevent text selection on swipe */
+}
+
+.team-swiper-btn {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 215, 0, 0.8);
+    border: none;
+    color: #213240;
+    font-size: 24px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.team-swiper-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.team-swiper-btn.prev {
+    left: 10px;
+}
+.team-swiper-btn.next {
+    right: 10px;
 }
 
 @keyframes team-bounce {
@@ -942,6 +972,12 @@
     }
     #team-player {
         margin-bottom: 20px;
+    }
+    #team-player {
+        position: relative; /* Necessário para posicionar as setas */
+    }
+    .team-swiper-btn {
+        display: block; /* Mostra as setas em telas menores */
     }
 }
 
