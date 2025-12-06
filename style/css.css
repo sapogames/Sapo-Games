@@ -648,9 +648,20 @@
         /* Responsive */
         @media (max-width: 768px) {
 
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-3d-container {
+                display: none;
+            }
 
             .game-card {
                 grid-template-columns: 1fr;
+            }
+            
+            .game-card.reverse-mobile .game-image {
+                order: -1;
             }
 
             .gallery-grid {
@@ -1010,4 +1021,22 @@
 
 .event-card .event-link:hover {
     color: rgb(85, 85, 85);
+}
+
+
+@media (max-width: 768px) {
+    #team-info {
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+    .game-info {
+        padding: 10px 0;
+    }
 }
