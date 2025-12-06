@@ -1,30 +1,4 @@
-        // Smooth scroll for navigation
-        // document.querySelectorAll('nav a').forEach(anchor => {
-        //     anchor.addEventListener('click', function(e) {
-        //         e.preventDefault();
-        //         const target = document.querySelector(this.getAttribute('href'));
-        //         if (target) {
-        //             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        //         }
-        //     });
-        // });
 
-
-        // Add more decorative symbols dynamically
-        const symbolsContainers = document.querySelectorAll('.decorative-symbols');
-        symbolsContainers.forEach(container => {
-            for (let i = 0; i < 15; i++) { // Aumentei para 15 para um efeito mais denso
-                const symbol = document.createElement('span');
-                symbol.className = 'symbol';
-                symbol.textContent = Math.random() > 0.5 ? '+' : '×';
-                symbol.style.top = Math.random() * 100 + '%';
-                symbol.style.left = Math.random() * 100 + '%';
-                symbol.style.animationDelay = Math.random() * 2 + 's';
-                container.appendChild(symbol);
-            }
-        });
-
-        // Highlight active nav link on scroll
         const sections = document.querySelectorAll('section[id], footer[id]'); // Inclui o footer na lista de seções
         const navLinks = document.querySelectorAll('nav a');
         const navHeight = document.querySelector('nav').offsetHeight;
@@ -207,16 +181,7 @@
                     date: '09/11/2025',
                     description: 'Vídeo de inscrição para 14ª Edição do Campus Mobile',
                     link: 'https://www.youtube.com/watch?v=dbilKg4wuOE'
-                },
-                // Adicione mais objetos de evento aqui
-                // {
-                //     imgSrc: 'assets/img/eventos/evento2.png',
-                //     imgAlt: 'Exemplo de Evento 2',
-                //     title: 'Game Jam Amazônia',
-                //     date: '15/01/2026',
-                //     description: 'Participamos da Game Jam Amazônia, desenvolvendo um protótipo incrível em 48 horas.',
-                //     instaLink: '#'
-                // },
+                }
             ];
 
             const eventsGrid = document.querySelector('#eventos .gallery-grid');

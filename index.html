@@ -38,24 +38,35 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-main-content">
-                <div class="logo-container">
-                    <div class="logo">
-                        <img src="assets/public/marca.png" width="500" height="300" alt="Sapo Gamer Logo">
-                    </div>
+                <div class="logo">
+                    <img src="assets/public/marca.png" width="500" height="300" alt="Sapo Gamer Logo">
                 </div>
-                <p class="frase-container">Onde tem floresta, tem conhecimento. Onde tem conhecimento, a gente propaga!</p>
+                <p class="frase-container" >Onde tem floresta, tem conhecimento. Onde tem conhecimento, a gente propaga!</p>
+                <a class="btn-play" href="https://sapogamesofc.itch.io/">
+                    <svg class="icon" id="Play" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path class="color000000 svgShape" fill="#ffffff" d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"></path>
+                    </svg>
+                    <span class="text">Nossos Jogos</span>
+                </a>
+            </div>
+
+            <div class="hero-3d-container">
+                <!-- O canvas do Three.js será inserido aqui via script -->
             </div>
         </div>
+        <div class="custom-shape-divider-bottom-1764680959">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
-    <!-- Pink Section - Game Showcases -->
-    <section class="games-section" id="jogos">
-        <!-- Game 1 -->
-        <div class="game-showcase">
-            <div class="game-images">
-  
-                <img class="game-image" src="assets/img/jogos/banzeiro.jpeg" >
 
-            </div>
+    <section class="games-section" id="jogos">
+        <!-- <h2 class="section-title">Vem Jogar!</h2> -->
+        <!-- Game 1 -->
+        <div class="game-card">
+            <video class="game-image" src="assets/video/banzeiro.mp4" autoplay muted loop></video>
+            <!-- <img class="game-image" src="assets/img/jogos/banzeiro.jpeg" > -->
             <div class="game-info">
                 <h3>Banzeiro</h3>
                 <p>
@@ -71,38 +82,31 @@
         </div>
 
         <!-- Game 2 -->
-        <div class="game-showcase reverse">
+        <div class="game-card">
             <div class="game-info">
                 <h3>Geobot</h3>
                 <p>
                     Explore o interior do planeta com Geobot, um robô geofísico criado para investigar as profundezas da Terra. Da crosta ao núcleo você coleta chips que revelam dados e curiosidades sobre a estrutura geológica do planeta. Mergulhe em uma aventura científica onde jogabilidade e geofísica se encontram em uma jornada de descoberta e conhecimento.
                 </p>
-                <button class="btn-play">
+                <button class="btn-play" href="https://sapogamesofc.itch.io/geobot">
                     <svg class="icon" id="Play" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                         <path class="color000000 svgShape" fill="#ffffff" d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"></path>
                     </svg>
-                    <span class="text">Em breve!</span>
+                    <span class="text">Jogue agora!</span>
                 </button>
             </div>
-            <div class="game-images">
-                <img class="game-image" src="assets/img/jogos/geobot.png">
- 
-            </div>
+
+            <video class="game-image mobile"  src="assets/video/geobot.mp4" autoplay muted loop></video>
         </div>
 
-        <!-- More Games Button -->
-        <div class="more-games-container">
-            <a class="animated-button" href="https://sapogamesofc.itch.io/">
-                <span>Mais Jogos</span>
-                <span></span>
-            </a>
-        </div>
         <div class="custom-shape-divider-bottom-1762575933">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
             </svg>
         </div>
     </section>
+
+
 
     <!-- Team Section -->
     <section class="team-section" id="equipe">
@@ -123,28 +127,20 @@
                 </div>
             </aside>
         </div>
+
     </section>
 
-    <!-- Footer Gallery -->
+
     <section class="footer-gallery" id="eventos">
         <h2 class="section-title">Eventos</h2>
-        <div class="decorative-symbols">
-            <span class="symbol" style="top: 10%; left: 5%;">+</span>
-            <span class="symbol" style="top: 20%; right: 10%;">×</span>
-            <span class="symbol" style="top: 40%; left: 15%;">+</span>
-            <span class="symbol" style="top: 60%; right: 20%;">×</span>
-            <span class="symbol" style="top: 80%; left: 25%;">+</span>
-            <span class="symbol" style="top: 30%; right: 5%;">+</span>
-            <span class="symbol" style="top: 70%; left: 40%;">×</span>
-            <span class="symbol" style="top: 50%; right: 30%;">+</span>
-        </div>
+
 
         <div class="gallery-grid">
             <!-- Os cards de evento serão inseridos aqui pelo script.js -->
 
         </div>
-    </section>
 
+    </section>
     <!-- Footer -->
     <footer id="contatos">
         <div class="footer-container">
@@ -179,6 +175,16 @@
             <p class="footer-copyright">© 2025 SAPOGAMES. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <!-- Importando o Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
     <script src="js/script.js"></script>
+    <script src="js/three-scene.js" type="module"></script>
 </body>
 </html>
