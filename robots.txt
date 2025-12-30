@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sapogames.github.io/Sapo-Games/sitemap.xml
